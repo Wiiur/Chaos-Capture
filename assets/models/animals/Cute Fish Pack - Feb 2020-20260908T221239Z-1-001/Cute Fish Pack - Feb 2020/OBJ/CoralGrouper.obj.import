@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cho88wneddhl2"
+path="res://.godot/imported/CoralGrouper.obj-0ea8d6a6bcb9e9fed5ed3c30e91c8fad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CoralGrouper.obj-0ea8d6a6bcb9e9fed5ed3c30e91c8fad.mesh"]
+
+source_file="res://assets/models/animals/Cute Fish Pack - Feb 2020-20260908T221239Z-1-001/Cute Fish Pack - Feb 2020/OBJ/CoralGrouper.obj"
+dest_files=["res://.godot/imported/CoralGrouper.obj-0ea8d6a6bcb9e9fed5ed3c30e91c8fad.mesh", "res://.godot/imported/CoralGrouper.obj-0ea8d6a6bcb9e9fed5ed3c30e91c8fad.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

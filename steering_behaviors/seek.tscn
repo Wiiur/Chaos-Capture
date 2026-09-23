@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dln5vcey51a2"]
+
+[ext_resource type="Script" uid="uid://cuf7xo81ra54e" path="res://scripts/steering_behaviors/seek.gd" id="1_0svid"]
+
+[node name="Seek" type="Node2D" unique_id=29620388]
+script = ExtResource("1_0svid")
+panic_radius = null
+show_panic_radius = null

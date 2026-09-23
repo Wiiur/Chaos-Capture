@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d1ynoq55b6ix5"
+path="res://.godot/imported/BlackLionFish.obj-634964c4105cb5b031eeb86368f00ffb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BlackLionFish.obj-634964c4105cb5b031eeb86368f00ffb.mesh"]
+
+source_file="res://assets/models/animals/Cute Fish Pack - Feb 2020-20260908T221239Z-1-001/Cute Fish Pack - Feb 2020/OBJ/BlackLionFish.obj"
+dest_files=["res://.godot/imported/BlackLionFish.obj-634964c4105cb5b031eeb86368f00ffb.mesh", "res://.godot/imported/BlackLionFish.obj-634964c4105cb5b031eeb86368f00ffb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

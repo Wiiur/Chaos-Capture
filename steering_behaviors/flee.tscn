@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://badf02oepi7pi"]
+
+[ext_resource type="Script" uid="uid://c6ffy1fkmf7ku" path="res://scripts/steering_behaviors/flee.gd" id="1_0e607"]
+
+[node name="Flee" type="Node2D" unique_id=769889600]
+script = ExtResource("1_0e607")
+panic_radius = null
+show_panic_radius = null

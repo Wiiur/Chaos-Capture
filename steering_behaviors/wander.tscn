@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cdhe2yj6ccokk"]
+
+[ext_resource type="Script" uid="uid://cwe7xpj1j523n" path="res://scripts/steering_behaviors/wander.gd" id="1_lo4no"]
+
+[node name="Wander" type="Node2D" unique_id=566803509]
+script = ExtResource("1_lo4no")
+wander_radius = null
+wander_distance = null
+wander_jitter = null
+show_visuals = null

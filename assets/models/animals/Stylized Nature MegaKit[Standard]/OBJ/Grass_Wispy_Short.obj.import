@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c6jelu0j2qdyg"
+path="res://.godot/imported/Grass_Wispy_Short.obj-42448a5cbab11e0c89d7d1648400feab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Grass_Wispy_Short.obj-42448a5cbab11e0c89d7d1648400feab.mesh"]
+
+source_file="res://assets/models/animals/Stylized Nature MegaKit[Standard]/OBJ/Grass_Wispy_Short.obj"
+dest_files=["res://.godot/imported/Grass_Wispy_Short.obj-42448a5cbab11e0c89d7d1648400feab.mesh", "res://.godot/imported/Grass_Wispy_Short.obj-42448a5cbab11e0c89d7d1648400feab.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

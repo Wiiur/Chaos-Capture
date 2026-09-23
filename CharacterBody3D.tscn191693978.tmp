@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dh53oovxx8x3w"]
+
+[ext_resource type="Script" uid="uid://djrp618ed5hgm" path="res://scripts/vehicle/vehicle.gd" id="1_5jdg5"]
+[ext_resource type="Script" uid="uid://dxsnn2gg1trwp" path="res://scripts/steering_behaviors/Graze3D.gd" id="2_mmdsn"]
+[ext_resource type="Script" uid="uid://cjeq27i44nnrm" path="res://scripts/steering_behaviors/obstacle_avoidance.gd" id="3_4t7jx"]
+[ext_resource type="Script" uid="uid://c76ey46o4bc7u" path="res://scripts/steering_behaviors/evade.gd" id="4_1w1v4"]
+[ext_resource type="Script" uid="uid://bb0t2ovl7wifo" path="res://addons/beehave/nodes/beehave_tree.gd" id="5_fc78i"]
+[ext_resource type="Script" uid="uid://8hn4kne15ac5" path="res://addons/beehave/nodes/composites/selector.gd" id="6_mmdsn"]
+[ext_resource type="Script" uid="uid://cg016dbe7gs1x" path="res://addons/beehave/nodes/composites/sequence.gd" id="7_1w1v4"]
+[ext_resource type="Script" uid="uid://i6fp8dh7d8tc" path="res://scripts/steering_behaviors/PlayerNearCondition.gd" id="8_tp4nn"]
+[ext_resource type="Script" uid="uid://da4jg1d3dfsex" path="res://scripts/steering_behaviors/FleeAction.gd" id="9_ng0tn"]
+[ext_resource type="Script" uid="uid://dv1sly074yhbk" path="res://scripts/steering_behaviors/WanderAction.gd" id="10_hd84y"]
+[ext_resource type="Script" uid="uid://cxujlcmmok76o" path="res://scripts/steering_behaviors/wall_avoidance.gd" id="11_mmdsn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y8xgx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y8xgx"]
+
+[node name="CharacterBody3d" type="CharacterBody3D" unique_id=1872870738]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_5jdg5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1933713622]
+shape = SubResource("CapsuleShape3D_y8xgx")
+debug_color = Color(0.6509804, 0, 0.25882354, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=355185650]
+layers = 7
+mesh = SubResource("CapsuleMesh_y8xgx")
+
+[node name="Wander" type="Node3D" parent="CollisionShape3D" unique_id=655655676]
+script = ExtResource("2_mmdsn")
+
+[node name="ObstacleAvoidance" type="Node3D" parent="." unique_id=2122355324]
+script = ExtResource("3_4t7jx")
+
+[node name="Flee" type="Node3D" parent="." unique_id=884064363]
+script = ExtResource("4_1w1v4")
+
+[node name="BeehaveTree" type="Node" parent="." unique_id=1378559849 node_paths=PackedStringArray("blackboard", "actor")]
+script = ExtResource("5_fc78i")
+actor_node_path = NodePath("..")
+blackboard = NodePath("@Node@20485")
+actor = NodePath("..")
+metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
+
+[node name="SelectorComposite" type="Node" parent="BeehaveTree" unique_id=306574775]
+script = ExtResource("6_mmdsn")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="SequenceComposite" type="Node" parent="BeehaveTree/SelectorComposite" unique_id=652478967]
+script = ExtResource("7_1w1v4")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="PlayerNearCondition" type="Node" parent="BeehaveTree/SelectorComposite/SequenceComposite" unique_id=1368413903]
+script = ExtResource("8_tp4nn")
+vision_angle_degrees = 120.0
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="FleeAction" type="Node" parent="BeehaveTree/SelectorComposite/SequenceComposite" unique_id=27863015]
+script = ExtResource("9_ng0tn")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="WanderAction" type="Node" parent="BeehaveTree/SelectorComposite" unique_id=114440444]
+script = ExtResource("10_hd84y")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="WallAvoidance" type="Node3D" parent="." unique_id=1930425926]
+script = ExtResource("11_mmdsn")
+feeler_length = 8.0
+wall_collision_mask = 7
